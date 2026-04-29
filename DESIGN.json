@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-04-28T00:00:00Z",
+  "title": "Design System: meder-cool-guy",
+  "extensions": {
+    "colorMeta": {
+      "void-violet":     { "role": "neutral",   "displayName": "Void Violet",     "canonical": "oklch(8% 0.035 280)",  "tonalRamp": ["oklch(8% 0.03 280)","oklch(14% 0.04 280)","oklch(22% 0.04 280)","oklch(32% 0.04 280)","oklch(44% 0.03 280)","oklch(57% 0.03 280)","oklch(71% 0.02 280)","oklch(86% 0.01 280)"] },
+      "panel-dark":      { "role": "neutral",   "displayName": "Panel Dark",      "canonical": "oklch(11% 0.04 280)", "tonalRamp": ["oklch(11% 0.04 280)","oklch(18% 0.04 280)","oklch(26% 0.04 280)","oklch(36% 0.04 280)","oklch(48% 0.03 280)","oklch(60% 0.03 280)","oklch(73% 0.02 280)","oklch(87% 0.01 280)"] },
+      "panel-mid":       { "role": "neutral",   "displayName": "Panel Mid",       "canonical": "oklch(14% 0.04 280)", "tonalRamp": ["oklch(14% 0.04 280)","oklch(22% 0.04 280)","oklch(30% 0.04 280)","oklch(40% 0.04 280)","oklch(52% 0.03 280)","oklch(63% 0.03 280)","oklch(75% 0.02 280)","oklch(88% 0.01 280)"] },
+      "ghost-lavender":  { "role": "neutral",   "displayName": "Ghost Lavender",  "canonical": "oklch(92% 0.04 280)", "tonalRamp": ["oklch(10% 0.04 280)","oklch(22% 0.04 280)","oklch(36% 0.04 280)","oklch(50% 0.04 280)","oklch(63% 0.03 280)","oklch(75% 0.03 280)","oklch(85% 0.03 280)","oklch(93% 0.03 280)"] },
+      "muted-violet":    { "role": "neutral",   "displayName": "Muted Violet",    "canonical": "oklch(54% 0.08 280)", "tonalRamp": ["oklch(10% 0.06 280)","oklch(22% 0.07 280)","oklch(33% 0.08 280)","oklch(44% 0.08 280)","oklch(54% 0.08 280)","oklch(65% 0.07 280)","oklch(76% 0.06 280)","oklch(87% 0.04 280)"] },
+      "electric-cyan":   { "role": "primary",   "displayName": "Electric Cyan",   "canonical": "oklch(91% 0.14 195)", "tonalRamp": ["oklch(15% 0.10 195)","oklch(28% 0.12 195)","oklch(40% 0.13 195)","oklch(52% 0.14 195)","oklch(63% 0.14 195)","oklch(75% 0.14 195)","oklch(85% 0.13 195)","oklch(93% 0.09 195)"] },
+      "neon-magenta":    { "role": "secondary", "displayName": "Neon Magenta",    "canonical": "oklch(67% 0.27 330)", "tonalRamp": ["oklch(15% 0.18 330)","oklch(25% 0.22 330)","oklch(35% 0.24 330)","oklch(45% 0.26 330)","oklch(55% 0.27 330)","oklch(65% 0.27 330)","oklch(75% 0.22 330)","oklch(88% 0.15 330)"] },
+      "acid-lime":       { "role": "tertiary",  "displayName": "Acid Lime",       "canonical": "oklch(94% 0.23 130)", "tonalRamp": ["oklch(15% 0.15 130)","oklch(28% 0.18 130)","oklch(40% 0.20 130)","oklch(55% 0.22 130)","oklch(68% 0.23 130)","oklch(78% 0.23 130)","oklch(88% 0.22 130)","oklch(95% 0.18 130)"] },
+      "terminal-yellow": { "role": "tertiary",  "displayName": "Terminal Yellow", "canonical": "oklch(92% 0.18 95)",  "tonalRamp": ["oklch(15% 0.10 95)","oklch(28% 0.13 95)","oklch(42% 0.15 95)","oklch(57% 0.17 95)","oklch(70% 0.18 95)","oklch(80% 0.18 95)","oklch(88% 0.17 95)","oklch(94% 0.14 95)"] },
+      "code-void":       { "role": "neutral",   "displayName": "Code Void",       "canonical": "oklch(6% 0.03 280)",  "tonalRamp": ["oklch(6% 0.03 280)","oklch(12% 0.04 280)","oklch(20% 0.04 280)","oklch(30% 0.04 280)","oklch(42% 0.03 280)","oklch(55% 0.03 280)","oklch(69% 0.02 280)","oklch(84% 0.01 280)"] },
+      "lavender-bg":     { "role": "neutral",   "displayName": "Lavender BG",     "canonical": "oklch(91% 0.04 285)", "tonalRamp": ["oklch(10% 0.04 285)","oklch(23% 0.04 285)","oklch(38% 0.04 285)","oklch(52% 0.04 285)","oklch(65% 0.04 285)","oklch(76% 0.04 285)","oklch(85% 0.04 285)","oklch(93% 0.03 285)"] },
+      "near-white":      { "role": "neutral",   "displayName": "Near White",      "canonical": "oklch(99% 0.005 285)","tonalRamp": ["oklch(10% 0.005 285)","oklch(25% 0.005 285)","oklch(40% 0.005 285)","oklch(55% 0.005 285)","oklch(68% 0.005 285)","oklch(79% 0.005 285)","oklch(89% 0.005 285)","oklch(99% 0.005 285)"] },
+      "deep-violet-ink": { "role": "neutral",   "displayName": "Deep Violet Ink", "canonical": "oklch(14% 0.06 290)", "tonalRamp": ["oklch(14% 0.06 290)","oklch(24% 0.06 290)","oklch(35% 0.06 290)","oklch(47% 0.06 290)","oklch(59% 0.05 290)","oklch(70% 0.04 290)","oklch(81% 0.03 290)","oklch(91% 0.02 290)"] }
+    },
+    "typographyMeta": {
+      "display":      { "displayName": "Display",      "purpose": "Hero title only. One use per page." },
+      "body":         { "displayName": "Body",         "purpose": "Post content. pre-wrap preserves author formatting." },
+      "label":        { "displayName": "Label",        "purpose": "Navigation tabs, marquee, prompt lines, sidebar rows." },
+      "panel-header": { "displayName": "Panel Header", "purpose": "Panel title strips — uppercase 10px, most compressed type." }
+    },
+    "shadows": [
+      { "name": "print-offset", "value": "3px 3px 0 var(--border)", "purpose": "Post cards and project cards. Hard offset, no blur — zine/print style." },
+      { "name": "glow-accent",  "value": "0 0 var(--glow-strength) [accent-color]", "purpose": "Hero cursor, status dots. Active in dark mode only — 0px in light." },
+      { "name": "glow-text",    "value": "0 0 4px [statusColor]", "purpose": "Status dot labels in the sidebar projects panel." }
+    ],
+    "motion": [
+      { "name": "marquee",       "value": "marquee 42s linear infinite",       "purpose": "Top bar scroll. Duplicated content for seamless loop." },
+      { "name": "blink",         "value": "blink 1.1s steps(2) infinite",      "purpose": "7px dot indicators in marquee and Currently panel." },
+      { "name": "cursor-blink",  "value": "cursor-blink 1s steps(2) infinite", "purpose": "Hero cursor block and prompt-line cursor character." },
+      { "name": "theme-switch",  "value": "background 200ms ease, color 200ms ease", "purpose": "Body theme transition on toggle." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "720px", "purpose": "Sidebar stacks above main column. Single-column layout." }
+    ]
+  },
+  "components": [
+    {
+      "name": "PostCard — Cyan Header",
+      "kind": "card",
+      "refersTo": "post-card-header-cyan",
+      "description": "Even-indexed post card. Cyan solid-color header strip, print-offset shadow.",
+      "html": "<article class=\"ds-post ds-post--cyan\"><header class=\"ds-post-head\"><span class=\"ds-post-meta\"><b>04-25</b> · 14:32</span><span class=\"ds-post-filed\">filed: <b>meder-cool-guy.com</b></span></header><div class=\"ds-post-body\">figured out the stack, pages, and overall vibe of the website.</div></article>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap'); .ds-post { margin-bottom: 14px; border: 1px solid #3df0ff; background: #15102e; box-shadow: 3px 3px 0 #3df0ff; font-family: 'JetBrains Mono', 'Courier New', monospace; border-radius: 0; } .ds-post-head { display: flex; justify-content: space-between; align-items: center; padding: 5px 12px; font-size: 11px; border-bottom: 1px solid #3df0ff; } .ds-post--cyan .ds-post-head { background: #3df0ff; color: #0d0a1f; } .ds-post-meta b { font-weight: 700; } .ds-post-body { padding: 14px; font-size: 13px; white-space: pre-wrap; line-height: 1.65; color: #e8e3ff; } .ds-post-head:hover { opacity: 0.9; }"
+    },
+    {
+      "name": "PostCard — Yellow Header",
+      "kind": "card",
+      "refersTo": "post-card-header-yellow",
+      "description": "Odd-indexed post card. Yellow solid-color header strip, print-offset shadow.",
+      "html": "<article class=\"ds-post ds-post--yellow\"><header class=\"ds-post-head\"><span class=\"ds-post-meta\"><b>04-24</b> · 23:11</span><span class=\"ds-post-filed\">filed: <b>kettle</b></span></header><div class=\"ds-post-body\">spent 4 hours trying to get a sidebar to not jump 2px on hover.</div></article>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap'); .ds-post { margin-bottom: 14px; border: 1px solid #3df0ff; background: #15102e; box-shadow: 3px 3px 0 #3df0ff; font-family: 'JetBrains Mono', 'Courier New', monospace; border-radius: 0; } .ds-post-head { display: flex; justify-content: space-between; align-items: center; padding: 5px 12px; font-size: 11px; border-bottom: 1px solid #3df0ff; } .ds-post--yellow .ds-post-head { background: #ffe14e; color: #0d0a1f; } .ds-post-meta b { font-weight: 700; } .ds-post-body { padding: 14px; font-size: 13px; white-space: pre-wrap; line-height: 1.65; color: #e8e3ff; }"
+    },
+    {
+      "name": "Sidebar Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Reusable sidebar widget shell. Panel head with chrome decoration, panel body with content.",
+      "html": "<div class=\"ds-panel\"><div class=\"ds-panel-head\"><span class=\"ds-panel-label\" style=\"color:#ff4ec3\">▸ me.png</span><span class=\"ds-panel-chrome\">[─][□][×]</span></div><div class=\"ds-panel-body\"><div style=\"font-size:11px;line-height:1.7\"><div><span style=\"color:#3df0ff\">name</span>: MEDER</div><div><span style=\"color:#3df0ff\">loc </span>: IL</div><div><span style=\"color:#3df0ff\">vibe</span>: humble</div></div></div></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap'); .ds-panel { border: 1px solid #3df0ff; background: #15102e; margin-bottom: 12px; font-family: 'JetBrains Mono', 'Courier New', monospace; border-radius: 0; color: #e8e3ff; } .ds-panel-head { border-bottom: 1px solid #3df0ff; padding: 4px 10px; font-size: 10px; text-transform: uppercase; letter-spacing: 1.2px; display: flex; justify-content: space-between; align-items: center; background: #1c1640; } .ds-panel-chrome { color: #7d76b3; } .ds-panel-body { padding: 10px; }"
+    },
+    {
+      "name": "Tab Strip",
+      "kind": "nav",
+      "refersTo": "panel",
+      "description": "Browser-tab navigation. Active tab visually joins content below via border-bottom trick.",
+      "html": "<div class=\"ds-tabs\"><span class=\"ds-tab ds-tab--active\">● home.html</span><a href=\"#\" class=\"ds-tab\">journal/</a><a href=\"#\" class=\"ds-tab\">projects/</a><span class=\"ds-tab-spacer\"></span><span class=\"ds-tab ds-tab--live\">📡 live</span></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap'); .ds-tabs { display: flex; border-bottom: 1px solid #3df0ff; font-size: 11px; font-family: 'JetBrains Mono', 'Courier New', monospace; } .ds-tab { padding: 6px 14px; color: #7d76b3; text-decoration: none; } .ds-tab--active { background: #15102e; border: 1px solid #3df0ff; border-bottom: 1px solid #15102e; margin-bottom: -1px; color: #3df0ff; } .ds-tab-spacer { flex: 1; } .ds-tab--live { color: #b6ff5c; } .ds-tab:hover:not(.ds-tab--active) { color: #e8e3ff; }"
+    },
+    {
+      "name": "Theme Toggle",
+      "kind": "button",
+      "refersTo": "theme-toggle",
+      "description": "Minimal theme switch. Inline in the marquee bar, right side.",
+      "html": "<button class=\"ds-theme-toggle\">◐ light</button>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap'); .ds-theme-toggle { flex-shrink: 0; margin-right: 12px; background: #0d0a1f; border: 1px solid #3df0ff; color: #e8e3ff; padding: 3px 10px; font-size: 11px; font-family: 'JetBrains Mono', 'Courier New', monospace; letter-spacing: 0.5px; cursor: pointer; border-radius: 0; transition: background 150ms ease; } .ds-theme-toggle:hover { background: #15102e; } .ds-theme-toggle:focus-visible { outline: 1px solid #3df0ff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Project Row",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "Compact project listing inside the sidebar Projects panel. Status dot glows in its status color.",
+      "html": "<div class=\"ds-proj-row\"><div class=\"ds-proj-row-top\"><span class=\"ds-proj-name\">meder-cool-guy.com</span><span class=\"ds-proj-status\" style=\"color:#b6ff5c;text-shadow:0 0 4px #b6ff5c\">● in progress</span></div><div class=\"ds-proj-meta\">2026 · 5 posts</div></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap'); .ds-proj-row { padding: 5px 0; border-bottom: 1px dashed rgba(61,240,255,0.3); font-size: 11px; font-family: 'JetBrains Mono', 'Courier New', monospace; color: #e8e3ff; } .ds-proj-row:last-child { border-bottom: none; } .ds-proj-row-top { display: flex; justify-content: space-between; align-items: center; gap: 6px; } .ds-proj-name { color: #e8e3ff; } .ds-proj-status { font-size: 9px; text-transform: lowercase; letter-spacing: 0.3px; } .ds-proj-meta { color: #7d76b3; font-size: 9.5px; margin-top: 2px; }"
+    },
+    {
+      "name": "Prompt Line",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "Terminal prompt decoration at the bottom of every content page. Non-interactive atmosphere element.",
+      "html": "<div class=\"ds-prompt\"><span class=\"ds-prompt-who\">meder@home:~$</span> _<span class=\"ds-prompt-cur\">|</span></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap'); @keyframes ds-blink { 0%,49%{opacity:1}50%,100%{opacity:0} } .ds-prompt { font-size: 11px; color: #7d76b3; margin-top: 16px; font-family: 'JetBrains Mono', 'Courier New', monospace; } .ds-prompt-who { color: #ff4ec3; } .ds-prompt-cur { display: inline-block; animation: ds-blink 1s steps(2) infinite; } @media (prefers-reduced-motion: reduce) { .ds-prompt-cur { animation: none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Late Night Room",
+    "overview": "This is a developer's bedroom at 2am — code on one screen, writing on the other, both happening at once. The visual language is a working terminal, not a showroom. Every page reads like something that is actively running: a process you walked in on mid-execution.\n\nThe system documents itself as it ships. The journal feeds the site; the site is the journal. The aesthetic rejects the polished portfolio, the retrospective case study, the \"what I learned\" post written three months after the fact. It rejects hero metrics, gradient text, and glassmorphism. The timestamped thinking trail is the anti-AI-slop proof of work — hard to fake, actually interesting to read.\n\nIn dark mode, the page lives inside the neon terminal. In light mode, the same layout inverts to lavender and deep violet — the same room in daylight. Same structure, different atmosphere.",
+    "keyCharacteristics": [
+      "Monospace-first: JetBrains Mono for all UI text, body, labels, code",
+      "Hard-cornered: zero border-radius across every component",
+      "Two-shadow system: print-offset shadows on cards, glow halos on accent elements (dark only)",
+      "Dual-mode palette: near-black neon (dark default) / lavender (light) — layout unchanged",
+      "Personality over polish: the author's voice, typos and all, is part of the design"
+    ],
+    "rules": [
+      { "name": "The Violet Chromatic Rule", "body": "Every neutral leans violet. #0d0a1f is not black, #e8e3ff is not white, #7d76b3 is not gray. The hue family is consistent across all 13 tokens. Nothing is neutral in the gray sense — ever.", "section": "colors" },
+      { "name": "The Glow-Only-in-Dark Rule", "body": "All glow shadows are keyed to --glow-strength: 6px in dark mode and 0px in light mode. Use box-shadow: 0 0 var(--glow-strength) [color] everywhere — in light mode, they silently disappear without a single conditional.", "section": "colors" },
+      { "name": "The Four-Accent Rule", "body": "Cyan, magenta, lime, yellow — the complete accent vocabulary. Each has one job. Do not add a fifth.", "section": "colors" },
+      { "name": "The Mono Floor Rule", "body": "JetBrains Mono is the floor, not an accent. Used for body, labels, navigation, metadata, and code. Any sans-serif UI text breaks the terminal register. Prohibited.", "section": "typography" },
+      { "name": "The Italic-Once Rule", "body": "Iowan Old Style italic appears only in the hero title (structural) and on standalone post-filed tags (semantic). Do not use italic for decoration elsewhere.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "There are no ambient shadows, no diffuse drop shadows, no blur-radius elevation. Surfaces do not float. Shadows appear only as print-offset (structural, on cards) or glow halo (expressive, on accents). Nothing else.", "section": "elevation" },
+      { "name": "The No-New-Shadows Rule", "body": "Do not introduce additional shadow values. The two systems cover every case. A new shadow type is a new design language — prohibited.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep every neutral tinted violet. Page bg, text, panels — the hue family is consistent across all 13 tokens.",
+      "Do use the print-offset shadow (3px 3px 0 var(--border)) for all cards.",
+      "Do preserve the author's exact formatting in post bodies — white-space: pre-wrap, typos intact, line breaks as written.",
+      "Do use JetBrains Mono for every UI text element below the hero.",
+      "Do keep border-radius at 0px on every component.",
+      "Do key all glow shadows to --glow-strength so they silently disappear in light mode with no conditionals.",
+      "Do alternate post card headers cyan/yellow by index."
+    ],
+    "donts": [
+      "Don't use gradient text (background-clip: text). One solid color per text element.",
+      "Don't add any border-radius. Even 2px reads as a different system.",
+      "Don't use glassmorphism or blur effects.",
+      "Don't add a fifth accent color. Cyan, magenta, lime, yellow — complete vocabulary.",
+      "Don't use any sans-serif font for UI text.",
+      "Don't use Iowan Old Style outside the hero title.",
+      "Don't apply hardcoded glow values in light mode. Let --glow-strength: 0px do the work.",
+      "Don't sanitize the post body copy. Lowercase, stream-of-consciousness, typos and slang are correct.",
+      "Don't add new shadow systems. Print-offset and glow halo are the two."
+    ]
+  }
+}

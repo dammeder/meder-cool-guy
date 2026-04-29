@@ -8,7 +8,6 @@ export default function Marquee() {
     { color: "var(--lime)", text: `⚒ ${ME.nowBuilding}` },
     { color: "var(--yellow)", text: "v0.1 alpha" },
     { color: "var(--cyan)", text: "★ hi :)" },
-    { color: "var(--pink)", text: "on mai dead" },
   ];
 
   return (

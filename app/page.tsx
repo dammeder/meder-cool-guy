@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Marquee from "@/components/Marquee";
 import Sidebar from "@/components/Sidebar";
 import PostCard from "@/components/PostCard";
@@ -13,8 +14,8 @@ export default function Home() {
       <main className="main">
         <div className="tabs">
           <span className="tab active">● home.html</span>
-          <span className="tab">journal/</span>
-          <span className="tab">projects/</span>
+          <Link href="/journal" className="tab">journal/</Link>
+          <Link href="/projects" className="tab">projects/</Link>
           <span className="tab-spacer" />
           <span className="tab live">📡 live</span>
         </div>
@@ -45,7 +46,7 @@ export default function Home() {
           <span className="label">
             <span className="dollar">$</span> tail -f journal/
           </span>
-          <a className="see-all" href="#">
+          <a className="see-all" href="/journal">
             see all →
           </a>
         </div>
