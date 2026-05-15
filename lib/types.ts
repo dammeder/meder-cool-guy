@@ -14,12 +14,13 @@ export interface Project {
 
 export interface Post {
   id: number;
-  date: string;     // YYYY-MM-DD
-  time: string;     // HH:MM
-  project: string | null; // project slug or null
+  date: string;
+  time: string;
+  projectSlug: string | null;
   body: string;
-  hasCode?: boolean;
-  codeSnippet?: string;
+  hasCode: boolean;
+  codeSnippet: string | null;
+  createdAt?: Date;
 }
 
 export interface Me {

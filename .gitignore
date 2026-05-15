@@ -45,3 +45,10 @@ next-env.d.ts
 # local db
 *.db
 *.db-journal
+
+# terraform secrets
+terraform/terraform.tfvars
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/.terraform.lock.hcl

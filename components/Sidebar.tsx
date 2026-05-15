@@ -6,8 +6,7 @@ function Photo() {
     <div className="panel">
       <div className="panel-head">
         <span style={{ color: "var(--pink)" }}>▸ me.png</span>
-        <span className="chrome">[─][□][×]</span>
-      </div>
+              </div>
       <div className="panel-body">
         <div className="photo">
           <Image src="/meder.jpg" alt="meder" fill sizes="240px" style={{ objectFit: "cover" }} />
@@ -27,8 +26,7 @@ function Files() {
     <div className="panel hide-mobile">
       <div className="panel-head">
         <span style={{ color: "var(--cyan)" }}>▸ explorer</span>
-        <span className="chrome">[─][□][×]</span>
-      </div>
+              </div>
       <div className="panel-body">
         <div className="file-tree">
           <div className="root">📁 ~/meder/</div>
@@ -49,8 +47,7 @@ function Projects() {
     <div className="panel">
       <div className="panel-head">
         <span style={{ color: "var(--lime)" }}>▸ my projects</span>
-        <span className="chrome">[─][□][×]</span>
-      </div>
+              </div>
       <div className="panel-body">
         {PROJECTS.map((p) => (
           <div key={p.slug} className="proj-row">
@@ -81,8 +78,7 @@ function Currently() {
     <div className="panel">
       <div className="panel-head">
         <span style={{ color: "var(--yellow)" }}>▸ im currently</span>
-        <span className="chrome">[─][□][×]</span>
-      </div>
+              </div>
       <div className="panel-body">
         <div className="currently">
           <div className="row">

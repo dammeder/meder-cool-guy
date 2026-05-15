@@ -3,7 +3,8 @@ import Marquee from "@/components/Marquee";
 import Sidebar from "@/components/Sidebar";
 import PostCard from "@/components/PostCard";
 import Scanlines from "@/components/Scanlines";
-import { POSTS, projectBySlug, statusVar } from "@/lib/data";
+import { projectBySlug, statusVar } from "@/lib/data";
+import { db } from "@/lib/db";
 
 export default async function ProjectPage({
   params,
@@ -31,7 +32,10 @@ export default async function ProjectPage({
     );
   }
 
-  const posts = POSTS.filter((p) => p.project === slug).sort((a, b) => b.id - a.id);
+  const posts = await db.post.findMany({
+    where: { projectSlug: slug },
+    orderBy: { id: "desc" },
+  });
 
   return (
     <div className="page">

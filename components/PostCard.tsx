@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default function PostCard({ post, index }: Props) {
-  const project = projectBySlug(post.project);
+  const project = projectBySlug(post.projectSlug);
   const headerStyle = index % 2 === 0 ? "h-cyan" : "h-yellow";
 
   return (
@@ -30,7 +30,7 @@ export default function PostCard({ post, index }: Props) {
       <div className="post-body">
         {post.body}
         {post.hasCode && post.codeSnippet && (
-          <pre className="post-code">{post.codeSnippet}</pre>
+          <pre className="post-code">{post.codeSnippet.replace(/\r\n/g, "\n")}</pre>
         )}
       </div>
     </article>

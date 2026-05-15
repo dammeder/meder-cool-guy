@@ -3,9 +3,10 @@ import Marquee from "@/components/Marquee";
 import Sidebar from "@/components/Sidebar";
 import PostCard from "@/components/PostCard";
 import Scanlines from "@/components/Scanlines";
-import { POSTS } from "@/lib/data";
+import { db } from "@/lib/db";
 
-export default function JournalPage() {
+export default async function JournalPage() {
+  const posts = await db.post.findMany({ orderBy: { id: "desc" } });
   return (
     <div className="page">
       <Marquee />
@@ -26,10 +27,10 @@ export default function JournalPage() {
           </span>
         </div>
 
-        {POSTS.length === 0 ? (
+        {posts.length === 0 ? (
           <p style={{ color: "var(--dim)", fontSize: "12px", padding: "12px 0" }}>no posts yet.</p>
         ) : (
-          POSTS.map((post, i) => (
+          posts.map((post, i) => (
             <PostCard key={post.id} post={post} index={i} />
           ))
         )}

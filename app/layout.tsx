@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const mono = JetBrains_Mono({
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={mono.variable} data-theme="dark" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: noFlash }} />
+        <Script id="theme-init" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: noFlash }} />
       </head>
       <body>{children}</body>
     </html>

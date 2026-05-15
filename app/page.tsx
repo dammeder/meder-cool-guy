@@ -3,9 +3,11 @@ import Marquee from "@/components/Marquee";
 import Sidebar from "@/components/Sidebar";
 import PostCard from "@/components/PostCard";
 import Scanlines from "@/components/Scanlines";
-import { ME, POSTS } from "@/lib/data";
+import { ME } from "@/lib/data";
+import { db } from "@/lib/db";
 
-export default function Home() {
+export default async function Home() {
+  const posts = await db.post.findMany({ orderBy: { id: "desc" }, take: 5 });
   return (
     <div className="page">
       <Marquee />
@@ -51,7 +53,7 @@ export default function Home() {
           </a>
         </div>
 
-        {POSTS.map((post, i) => (
+        {posts.map((post, i) => (
           <PostCard key={post.id} post={post} index={i} />
         ))}
 
