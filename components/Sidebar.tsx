@@ -75,7 +75,7 @@ function Projects() {
 
 function Currently() {
   return (
-    <div className="panel">
+    <div className="panel hide-mobile">
       <div className="panel-head">
         <span style={{ color: "var(--yellow)" }}>▸ im currently</span>
               </div>

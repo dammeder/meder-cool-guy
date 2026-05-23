@@ -374,20 +374,41 @@ ul { list-style: none; }
 
 /* mobile */
 @media (max-width: 720px) {
+  body { overflow-x: hidden; }
+
   .page {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas: "top" "main" "side";
+  }
+
+  /* let the page scroll naturally — no inner scroll traps */
+  .main {
+    padding: 14px;
+    overflow-y: visible;
   }
   .sidebar {
     border-right: none;
     border-top: 1px solid var(--border);
     padding: 12px;
+    overflow-y: visible;
   }
+
   .panel.hide-mobile { display: none; }
-  .main { padding: 14px; }
-  .hero-title { font-size: 28px; }
-  .tabs { font-size: 11px; }
-  .tab { padding: 10px 12px; min-height: 44px; display: flex; align-items: center; }
+
+  /* constrain photo so it doesn't take over the screen */
+  .photo { max-height: 180px; }
+
+  .hero-title { font-size: 26px; letter-spacing: -0.5px; }
+  .hero-line { font-size: 12px; }
+
+  /* tabs: allow horizontal scroll if needed, larger tap targets */
+  .tabs { font-size: 11px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tab { padding: 10px 12px; min-height: 44px; display: flex; align-items: center; white-space: nowrap; }
+
+  /* post header: wrap gracefully on narrow viewports */
+  .post-head { flex-wrap: wrap; gap: 2px; }
+  .post-body { font-size: 13px; }
 }
 
 /* reduced motion */
