@@ -4,6 +4,8 @@ import Sidebar from "@/components/Sidebar";
 import Scanlines from "@/components/Scanlines";
 import NavTabs from "@/components/NavTabs";
 
+export const metadata = { title: "404" };
+
 export default function NotFound() {
   return (
     <div className="page">
