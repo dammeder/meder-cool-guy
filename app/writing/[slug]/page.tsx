@@ -69,7 +69,9 @@ export default async function ArticlePage({
                   return <pre className="post-code">{children}</pre>;
                 },
                 code({ className, children, ...props }) {
-                  const isBlock = Boolean(className?.startsWith("language-"));
+                  const hasLang = Boolean(className?.startsWith("language-"));
+                  const hasNewline = String(children).includes("\n");
+                  const isBlock = hasLang || hasNewline;
                   if (isBlock) {
                     return <code className={className} {...props}>{children}</code>;
                   }

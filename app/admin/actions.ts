@@ -44,8 +44,8 @@ export async function createArticle(
   const body = (formData.get("body") as string | null)?.trim();
 
   if (!slug) return { error: "slug is required." };
-  if (!/^[a-z0-9-]+$/.test(slug))
-    return { error: "slug: lowercase letters, numbers, and hyphens only." };
+  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug))
+    return { error: "slug: lowercase letters and numbers, separated by single hyphens." };
   if (!title) return { error: "title is required." };
   if (!description) return { error: "description is required." };
   if (!body) return { error: "body can't be empty." };

@@ -5,7 +5,10 @@ import Scanlines from "@/components/Scanlines";
 import { db } from "@/lib/db";
 
 export default async function WritingPage() {
-  const articles = await db.article.findMany({ orderBy: { publishedAt: "desc" } });
+  const articles = await db.article.findMany({
+    orderBy: { publishedAt: "desc" },
+    take: 50,
+  });
 
   return (
     <div className="page">
