@@ -22,3 +22,14 @@ model Post {
   projectSlug String?
   createdAt   DateTime @default(now())
 }
+
+model Article {
+  id          Int      @id @default(autoincrement())
+  slug        String   @unique
+  title       String
+  description String
+  body        String
+  publishedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

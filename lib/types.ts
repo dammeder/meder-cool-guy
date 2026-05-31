@@ -41,3 +41,14 @@ export interface Link {
   handle: string;
   kind: "gh" | "mail" | "tw" | "rss";
 }
+
+export interface Article {
+  id: number;
+  slug: string;
+  title: string;
+  description: string;
+  body: string;
+  publishedAt: Date;
+  createdAt: Date;
+  updatedAt: Date;
+}
