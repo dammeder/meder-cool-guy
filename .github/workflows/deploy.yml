@@ -21,7 +21,7 @@ jobs:
             cd ~/app
             git fetch origin main
             git reset --hard origin/main
-            npm ci
+            npm install
             npx prisma migrate deploy
             npm run build
             pm2 restart mcg
