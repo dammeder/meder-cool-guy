@@ -10,7 +10,10 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "meder-cool-guy.com",
+  title: {
+    default: "meder-cool-guy.com",
+    template: "%s — meder",
+  },
   description: "this is my corner of the internet.",
 };
 

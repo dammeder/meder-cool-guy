@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Marquee from "@/components/Marquee";
 import Sidebar from "@/components/Sidebar";
 import PostCard from "@/components/PostCard";
 import Scanlines from "@/components/Scanlines";
+import NavTabs from "@/components/NavTabs";
 import { ME } from "@/lib/data";
 import { db } from "@/lib/db";
 
@@ -14,13 +14,7 @@ export default async function Home() {
       <Sidebar />
 
       <main className="main">
-        <div className="tabs">
-          <span className="tab active">● home.html</span>
-          <Link href="/writing" className="tab">writing/</Link>
-          <Link href="/projects" className="tab">projects/</Link>
-          <span className="tab-spacer" />
-          <span className="tab live">📡 live</span>
-        </div>
+        <NavTabs active="home" />
 
         <section className="hero">
           <div className="hero-prompt">

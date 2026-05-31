@@ -2,7 +2,12 @@ import Link from "next/link";
 import Marquee from "@/components/Marquee";
 import Sidebar from "@/components/Sidebar";
 import Scanlines from "@/components/Scanlines";
+import NavTabs from "@/components/NavTabs";
 import { db } from "@/lib/db";
+import { formatShort } from "@/lib/date";
+
+export const metadata = { title: "writing" };
+export const revalidate = 60;
 
 export default async function WritingPage() {
   const articles = await db.article.findMany({
@@ -16,13 +21,7 @@ export default async function WritingPage() {
       <Sidebar />
 
       <main className="main">
-        <div className="tabs">
-          <Link href="/" className="tab">home.html</Link>
-          <span className="tab active">● writing/</span>
-          <Link href="/projects" className="tab">projects/</Link>
-          <span className="tab-spacer" />
-          <span className="tab live">📡 live</span>
-        </div>
+        <NavTabs active="writing" />
 
         <div className="journal-head">
           <span className="label">
@@ -40,7 +39,7 @@ export default async function WritingPage() {
               <li key={article.id}>
                 <Link href={`/writing/${article.slug}`} className="writing-row">
                   <span className="writing-row-date">
-                    {article.publishedAt.toISOString().slice(5, 10)}
+                    {formatShort(article.publishedAt)}
                   </span>
                   <span className="writing-row-title">{article.title}</span>
                   <span className="writing-row-arrow">→</span>

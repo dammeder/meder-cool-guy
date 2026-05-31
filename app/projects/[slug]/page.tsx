@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import Marquee from "@/components/Marquee";
 import Sidebar from "@/components/Sidebar";
 import PostCard from "@/components/PostCard";
 import Scanlines from "@/components/Scanlines";
+import NavTabs from "@/components/NavTabs";
 import { projectBySlug, statusVar } from "@/lib/data";
 import { db } from "@/lib/db";
 
@@ -14,23 +16,7 @@ export default async function ProjectPage({
   const { slug } = await params;
   const project = projectBySlug(slug);
 
-  if (!project) {
-    return (
-      <div className="placeholder">
-        <div className="placeholder-inner">
-          <div className="placeholder-prompt">
-            <span className="who">meder@home:~$</span> cat projects/{slug}/README.md
-          </div>
-          <div className="placeholder-msg">
-            bash: projects/{slug}: No such file or directory
-            <br />
-            <br />
-            <Link href="/projects">← projects</Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  if (!project) notFound();
 
   const posts = await db.post.findMany({
     where: { projectSlug: slug },
@@ -43,13 +29,7 @@ export default async function ProjectPage({
       <Sidebar />
 
       <main className="main">
-        <div className="tabs">
-          <Link href="/" className="tab">home.html</Link>
-          <Link href="/writing" className="tab">writing/</Link>
-          <Link href="/projects" className="tab active">● projects/</Link>
-          <span className="tab-spacer" />
-          <span className="tab live">📡 live</span>
-        </div>
+        <NavTabs active="projects" />
 
         <div className="journal-head">
           <span className="label">

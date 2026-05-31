@@ -2,7 +2,10 @@ import Link from "next/link";
 import Marquee from "@/components/Marquee";
 import Sidebar from "@/components/Sidebar";
 import Scanlines from "@/components/Scanlines";
+import NavTabs from "@/components/NavTabs";
 import { PROJECTS, statusVar } from "@/lib/data";
+
+export const metadata = { title: "projects" };
 
 export default function ProjectsPage() {
   return (
@@ -11,13 +14,7 @@ export default function ProjectsPage() {
       <Sidebar />
 
       <main className="main">
-        <div className="tabs">
-          <Link href="/" className="tab">home.html</Link>
-          <Link href="/journal" className="tab">journal/</Link>
-          <span className="tab active">● projects/</span>
-          <span className="tab-spacer" />
-          <span className="tab live">📡 live</span>
-        </div>
+        <NavTabs active="projects" />
 
         <div className="journal-head">
           <span className="label">

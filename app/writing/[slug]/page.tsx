@@ -1,9 +1,33 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import Marquee from "@/components/Marquee";
 import Scanlines from "@/components/Scanlines";
+import NavTabs from "@/components/NavTabs";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { db } from "@/lib/db";
+import { formatLong } from "@/lib/date";
+
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  const articles = await db.article.findMany({ select: { slug: true } });
+  return articles.map((a) => ({ slug: a.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const article = await db.article.findUnique({
+    where: { slug },
+    select: { title: true, description: true },
+  });
+  if (!article) return { title: "404" };
+  return { title: article.title, description: article.description };
+}
 
 export default async function ArticlePage({
   params,
@@ -12,43 +36,16 @@ export default async function ArticlePage({
 }) {
   const { slug } = await params;
   const article = await db.article.findUnique({ where: { slug } });
+  if (!article) notFound();
 
-  if (!article) {
-    return (
-      <div className="placeholder">
-        <div className="placeholder-inner">
-          <div className="placeholder-prompt">
-            <span className="who">meder@home:~$</span> cat writing/{slug}.md
-          </div>
-          <div className="placeholder-msg">
-            bash: writing/{slug}.md: No such file or directory
-            <br />
-            <br />
-            <Link href="/writing">← writing</Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  const dateStr = article.publishedAt.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  const dateStr = formatLong(article.publishedAt);
 
   return (
     <div className="page reading">
       <Marquee />
 
       <main className="main">
-        <div className="tabs">
-          <Link href="/" className="tab">home.html</Link>
-          <Link href="/writing" className="tab active">● writing/</Link>
-          <Link href="/projects" className="tab">projects/</Link>
-          <span className="tab-spacer" />
-          <span className="tab live">📡 live</span>
-        </div>
+        <NavTabs active="writing" />
 
         <div className="article-container">
           <div className="journal-head">
@@ -68,7 +65,8 @@ export default async function ArticlePage({
                 pre({ children }) {
                   return <pre className="post-code">{children}</pre>;
                 },
-                code({ className, children, ...props }) {
+                code({ className, children, node, ...props }) {
+                  void node;
                   const hasLang = Boolean(className?.startsWith("language-"));
                   const hasNewline = String(children).includes("\n");
                   const isBlock = hasLang || hasNewline;

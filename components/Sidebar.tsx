@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SidebarFiles from "@/components/SidebarFiles";
 import { ME, PROJECTS, statusVar } from "@/lib/data";
 
 function Photo() {
@@ -15,27 +16,6 @@ function Photo() {
           <div><span className="key">name</span>: {ME.name}</div>
           <div><span className="key">loc </span>: {ME.location}</div>
           <div><span className="key">vibe</span>: humble</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Files() {
-  return (
-    <div className="panel hide-mobile">
-      <div className="panel-head">
-        <span style={{ color: "var(--cyan)" }}>▸ explorer</span>
-              </div>
-      <div className="panel-body">
-        <div className="file-tree">
-          <div className="root">📁 ~/meder/</div>
-          <div className="indent">
-            <div className="item"><span className="arrow-active">›</span> home.html</div>
-            <div className="item dim">› writing/</div>
-            <div className="item dim">› projects/</div>
-            <div className="item dim">› about.md</div>
-          </div>
         </div>
       </div>
     </div>
@@ -103,7 +83,7 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <Photo />
-      <Files />
+      <SidebarFiles />
       <Projects />
       <Currently />
     </aside>
