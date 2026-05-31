@@ -45,7 +45,7 @@ export default async function ProjectPage({
       <main className="main">
         <div className="tabs">
           <Link href="/" className="tab">home.html</Link>
-          <Link href="/journal" className="tab">journal/</Link>
+          <Link href="/writing" className="tab">writing/</Link>
           <Link href="/projects" className="tab active">● projects/</Link>
           <span className="tab-spacer" />
           <span className="tab live">📡 live</span>

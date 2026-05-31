@@ -16,7 +16,7 @@ export default async function Home() {
       <main className="main">
         <div className="tabs">
           <span className="tab active">● home.html</span>
-          <Link href="/journal" className="tab">journal/</Link>
+          <Link href="/writing" className="tab">writing/</Link>
           <Link href="/projects" className="tab">projects/</Link>
           <span className="tab-spacer" />
           <span className="tab live">📡 live</span>
@@ -46,11 +46,8 @@ export default async function Home() {
 
         <div className="journal-head">
           <span className="label">
-            <span className="dollar">$</span> tail -f journal/
+            <span className="dollar">$</span> tail -f posts/
           </span>
-          <a className="see-all" href="/journal">
-            see all →
-          </a>
         </div>
 
         {posts.map((post, i) => (

@@ -32,7 +32,7 @@ function Files() {
           <div className="root">📁 ~/meder/</div>
           <div className="indent">
             <div className="item"><span className="arrow-active">›</span> home.html</div>
-            <div className="item dim">› journal/</div>
+            <div className="item dim">› writing/</div>
             <div className="item dim">› projects/</div>
             <div className="item dim">› about.md</div>
           </div>
